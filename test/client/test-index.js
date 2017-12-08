@@ -1,20 +1,20 @@
-import React from 'react';
-import TestUtils from 'react-addons-test-utils';
-import chai from 'chai';
-import {Provider} from 'react-redux';
+import React from "react";
+import TestUtils from "react-addons-test-utils";
+import chai from "chai";
+import {Provider} from "react-redux";
 
 const should = chai.should();
 
-import {KittenContainer} from '../../client/js/components/kitten-container';
+import {KittenContainer} from "../../client/js/components/kitten-container";
 import Kitten from "../../client/js/components/kitten";
-import store from '../../client/js/store';
+import store from "../../client/js/store";
 
-describe('Kitten Container component', function() {
-    it('Renders directions, a button, and a kitten image place',  function() {
+describe("Kitten Container component", function() {
+    it("Renders directions, a button, and a kitten image place",  function() {
         const renderer = TestUtils.createRenderer();
         renderer.render(<KittenContainer />);
         const result = renderer.getRenderOutput();
-        result.props.className.should.equal('kitten-container');
+        result.props.className.should.equal("kitten-container");
 
         const div = result.props.children[0];
         div.type.should.equal("div");
@@ -29,12 +29,12 @@ describe('Kitten Container component', function() {
 
     });
 });
-describe('Kitten component', function() {
-    it('Renders a kitten img',  function() {
+describe("Kitten component", function() {
+    it("Renders a kitten img",  function() {
         const renderer = TestUtils.createRenderer();
         renderer.render(<Kitten />);
         const result = renderer.getRenderOutput();
-        result.props.className.should.equal('kitten');
+        result.props.className.should.equal("kitten");
 
         const img = result.props.children;
         img.type.should.equal("img");

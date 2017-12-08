@@ -1,6 +1,6 @@
 body * {
-  box-sizing: border-box;
-  font-family: 'Bigelow Rules', cursive;
+    box-sizing: border-box;
+    font-family: 'Bigelow Rules', cursive;
 }
 body{
     background-color: lightpink;
@@ -65,9 +65,19 @@ h2, p{
     position:absolute;
     width:100%;
 }
+//mobile device styling
 .pic{
     display:block;
-    width: 400px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
+}
+//full screem styling
+@media only screen and (min-width: 640px) {
+    .pic{
+        display:block;
+        width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
