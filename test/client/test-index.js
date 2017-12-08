@@ -5,9 +5,9 @@ import {Provider} from 'react-redux';
 
 const should = chai.should();
 
-import {KittenContainer} from '../js/components/kitten-container';
-import Kitten from "../js/components/kitten";
-import store from '../js/store';
+import {KittenContainer} from '../../client/js/components/kitten-container';
+import Kitten from "../../client/js/components/kitten";
+import store from '../../client/js/store';
 
 describe('Kitten Container component', function() {
     it('Renders directions, a button, and a kitten image place',  function() {
