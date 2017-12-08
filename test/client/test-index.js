@@ -16,13 +16,15 @@ describe('Kitten Container component', function() {
         const result = renderer.getRenderOutput();
         result.props.className.should.equal('kitten-container');
 
-        const h1 = result.props.children[0];
-        h1.type.should.equal("h1");
+        const div = result.props.children[0];
+        div.type.should.equal("div");
         const h2 = result.props.children[1];
         h2.type.should.equal("h2");
         const button = result.props.children[2];
         button.type.should.equal("button");
-        const kitten = result.props.children[3];
+        const p = result.props.children[3];
+        p.type.should.equal("p");
+        const kitten = result.props.children[4];
         kitten.type.should.equal(Kitten);
 
     });

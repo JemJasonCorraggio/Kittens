@@ -7,7 +7,6 @@ export class KittenContainer extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            value: ""
         };
         this.newKitten = this.newKitten.bind(this);
 }
@@ -17,9 +16,10 @@ export class KittenContainer extends React.Component {
    render (){
     return (
         <div className="kitten-container">
-        <h1>Kitten Generator</h1>
+        <div className="title-bar"><img className = "logo" src="../assets/logo.png"/><h1 className = "title"> Woe Kittens</h1></div>
         <h2>Click the button for another kitten</h2>
         <button onClick={(event)=> {event.preventDefault(); this.newKitten();}}>New Kitten</button>
+        <p>{this.props.message}</p>
         <Kitten src={this.props.img} />
         </div>
     );
@@ -28,7 +28,8 @@ export class KittenContainer extends React.Component {
 const mapStateToProps = (state, props) => ({
     img: state.img,
     categories: state.categories,
-    number: state.number
+    number: state.number,
+    message: state.message
 });
 
 export default connect(mapStateToProps)(KittenContainer);
