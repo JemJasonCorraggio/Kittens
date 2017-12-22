@@ -3,11 +3,10 @@ import "isomorphic-fetch";
 export const fetchNewKitten = (category) => dispatch => {
     //add loading message
     dispatch(loadingKitten());
-    var url = `https://thecatapi.com/api/images/get?format=src&category=`;
+    var url = `http://thecatapi.com/api/images/get?format=src&type=gif&category=`;
     url = url + category;
-    return fetch(url)
-    //add new kitten src
-    .then(res=> {dispatch(fetchKitten(res.url));});
+    setTimeout(() => dispatch(fetchKitten(url)), 500);
+
 };
 export const FETCH_NEW_KITTEN = "FETCH_NEW_KITTEN";
 export const fetchKitten = (kitten) => ({

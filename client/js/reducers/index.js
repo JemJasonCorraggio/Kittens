@@ -1,7 +1,7 @@
 import * as actions from "../actions/index";
 import store from "../store";
 
-const initialState = {img: "https://thecatapi.com/api/images/get?format=src&type=gif", categories: ["space","boxes","caturday","dream","sinks","clothes"],
+const initialState = {img: "http://thecatapi.com/api/images/get?format=src&type=gif", categories: ["space","boxes","caturday","dream","sinks","clothes"],
     number: 0, message: ""};
 
 export const kittenReducer = (state=initialState, action) => {
